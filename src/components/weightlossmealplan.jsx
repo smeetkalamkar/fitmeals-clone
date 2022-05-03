@@ -1,15 +1,18 @@
 import styled from "styled-components"
 import weightlosspic from "./pictures/weightloss.jpg"
-
+import got1 from "./pictures/got1.png"
+import got2 from "./pictures/got2.png"
+import got3 from "./pictures/got3.png"
+import got4 from "./pictures/got4.png"
 const MainDiv=styled.div`
     width:100%;
     height:auto;
-    position:absolute;
+   
     &>div:nth-child(1){
         width:100%;
         height:380px;
-        position:fixed;
-        z-index:-1;
+         position:fixed;
+         z-index:-1;   
         &>img{
             width:100%;
             height:100%;
@@ -18,31 +21,30 @@ const MainDiv=styled.div`
     &>div:nth-child(2){
         width:100%;
         height:380px;
-        top:0;
         display:flex;
         background-color:transparent;
         justify-content:center;
         align-items:center;
         font-size:26px;
+       
+        
     }
     &>div:nth-child(3){
         width:100%;
-        height:690px;
-        position:absolute;
+        height:500px;
         background-color:white;
+        padding-top:95px;
+       
         &>div{
+         
             width:100%;
             height:500px;
             background-color:#f3f5ed;
-            position:relative;
-            margin-top:95px;
-            margin-bottom:95px;
             display:flex;
             justify-content:center;
             align-items:center;
-
-
             &>div:nth-child(1){
+                
             width:35%;
             display:flex;
             flex-direction:column;
@@ -84,16 +86,55 @@ width:40%;
 
 `
 const SecondDiv=styled.div`
+border:solid 2px white;
 &&&{
     width:100%;
-    height:520px;
-    background-color:yellow;
+    height:600px;
+    background-color:white;
+    text-align:center;
     &>h6{
         font-family: 'Sacramento', serif;
     font-family: var(--font-subheaders),serif;
     font-weight: 400;
     font-size: 40px;
+    text-align:center;
+    margin-top:60px
     }
+   &>div{
+    margin-top:-30px;
+       width:100%;
+       height:80%;
+       background-color:white;
+       display:flex;
+       justify-content:space-around;
+       &>div{
+       width:70%;
+       height:80%;
+       display:flex;
+       justify-content:space-around;
+       &>div{
+margin-top:20px;
+height:400px;
+
+&>div{
+width:100px;
+height:100px;
+border-radius:100px;
+background-color:#8ec138;
+&:hover{
+   transition: all 0.5s;
+   transform: rotateY(180deg);
+}
+&>img{
+width:100%;
+height:100%;
+border-radius:100px;
+
+}
+}
+       }
+   }
+   }
 }
     
 `
@@ -105,7 +146,7 @@ export const WeightLossMealPlan=()=>{
         <div>
 <h1 style={{color:"white"}}>Weight Loss Meal Plan</h1>
         </div>
-    <div>
+    <div >
    <div>
 
        <div>
@@ -133,12 +174,35 @@ per month and all your meals will be designed by our nutritionists
 </div>
        </div>
    </div>
-   <SecondDiv>
-<h6>How Does It Work?</h6>
-DI
-</SecondDiv>
-    </div>
 
+    </div>
+    <SecondDiv>
+<h6>How Does It Work?</h6>
+<div>
+<div>
+    <div>
+        <div>
+            <img src={got1} alt="" />
+        </div>
+    </div>
+    <div>
+    <div>
+            <img src={got2} alt="" />
+        </div>
+    </div>
+    <div>
+    <div>
+            <img src={got3} alt="" />
+        </div>
+    </div>
+    <div>
+    <div>
+            <img src={got4} alt="" />
+        </div>
+    </div>
+</div>
+</div>
+</SecondDiv>
 
     </MainDiv>
 }
