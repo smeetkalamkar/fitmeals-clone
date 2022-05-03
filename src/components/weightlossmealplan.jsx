@@ -84,17 +84,18 @@ width:40%;
 
 `
 const SecondDiv=styled.div`
+&&&{
     width:100%;
     height:520px;
-    background-color:black;
+    background-color:yellow;
     &>h6{
         font-family: 'Sacramento', serif;
     font-family: var(--font-subheaders),serif;
     font-weight: 400;
     font-size: 40px;
-    color:black;
     }
-
+}
+    
 `
 export const WeightLossMealPlan=()=>{
     return <MainDiv>
@@ -132,12 +133,12 @@ per month and all your meals will be designed by our nutritionists
 </div>
        </div>
    </div>
- 
-    </div>
-<SecondDiv>
+   <SecondDiv>
 <h6>How Does It Work?</h6>
-
+DI
 </SecondDiv>
+    </div>
+
 
     </MainDiv>
 }
