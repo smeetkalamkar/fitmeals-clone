@@ -1,3 +1,4 @@
+
 import styled from "styled-components"
 
 import React, { Component } from "react";
@@ -164,7 +165,7 @@ border-radius:100px;
 }
     
 `
-export const WeightLossMealPlan=()=>{
+export const MaintenanceMealPlan=()=>{
   
     class AutoPlayMethods extends Component {
         constructor(props) {
@@ -277,24 +278,20 @@ export const WeightLossMealPlan=()=>{
         <img src="https://www.fitmeals.co.in/wp-content/uploads/2018/02/inner-page.jpg" alt="" />
         </div>
         <div>
-<h1 style={{color:"white"}}>Weight Loss Meal Plan</h1>
+<h1 style={{color:"white"}}>Maintenance Meal Plan</h1>
         </div>
     <div >
    <div>
 
        <div>
 <p>
-If your aim is to lose weight in a gradual, healthy manner then 
-this diet would meet your requirements. The meals are well balanced and 
-consist of complex carbohydrates, lean protein, healthy fats and generous portions
-of fruits and vegetables which add all the essential vitamins, minerals and fibre to your diet.
+Just looking for healthy food to help you maintain your weight and lead a healthy lifestyle? This is the plan for you! The
+ meals are well balanced and consist of complex carbohydrates, lean protein, healthy 
+fats and generous portions of fruits and vegetables which add all the essential vitamins, minerals and fibre to your diet.
 <br />
 <br />
-Disclaimer: This isn’t going to be any type of a crash diet which will 
-give you magical results; we’ll aim for 2-4kgs 
-per month and all your meals will be designed by our nutritionists
- who focus not only on seeing results but also on ensuring that there’s 
- no compromise on your mental and physical health.
+Losing weight is hard but maintaining your weight and just eating healthy in general can be 
+a challenge for a lot of people which is why you can trust us to take care of that for you.
 </p>
 <button>View Sample Menu</button>
        </div>
@@ -432,18 +429,28 @@ per month and all your meals will be designed by our nutritionists
   </div>
 </div>
 </div>
-<div className="fourdiv">
-  <h6>Weight-loss Diaries</h6>
-<AutoPlayMethods1></AutoPlayMethods1>
-</div>
-<div className="finder">
-<div className="fifthdiv">
-<img src={gito} alt="" />
+<div className="kiop">
+<div className="finalimage">
+    <div>
+        <img src="https://www.fitmeals.co.in/wp-content/uploads/2021/05/keto.jpg" alt="" />
+    </div>
+    <div>
+        <img src="https://www.fitmeals.co.in/wp-content/uploads/2021/05/maintenance.jpg" alt="" />
+    </div>
+    <div>
+        <img src="https://www.fitmeals.co.in/wp-content/uploads/2021/05/weight.jpg" alt="" />
+    </div>
+    <div>
+        <img src="https://www.fitmeals.co.in/wp-content/uploads/2021/05/athletic.jpg" alt="" />
+    </div>
+    <div>
+        <img src="https://www.fitmeals.co.in/wp-content/uploads/2021/05/DSC02782-1-360x241.jpg" alt="" />
+    </div>
+    <div>
+        <img src="https://www.fitmeals.co.in/wp-content/uploads/2021/05/11.jpg" alt="" />
+    </div>
 </div>
 </div>
 
-<div className="empspan">
-
-</div>
     </MainDiv>
 }

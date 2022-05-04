@@ -164,7 +164,7 @@ border-radius:100px;
 }
     
 `
-export const WeightLossMealPlan=()=>{
+export const AthleticPlan=()=>{
   
     class AutoPlayMethods extends Component {
         constructor(props) {
@@ -277,24 +277,20 @@ export const WeightLossMealPlan=()=>{
         <img src="https://www.fitmeals.co.in/wp-content/uploads/2018/02/inner-page.jpg" alt="" />
         </div>
         <div>
-<h1 style={{color:"white"}}>Weight Loss Meal Plan</h1>
+<h1 style={{color:"white"}}>Athletic Plan</h1>
         </div>
     <div >
    <div>
 
        <div>
 <p>
-If your aim is to lose weight in a gradual, healthy manner then 
-this diet would meet your requirements. The meals are well balanced and 
-consist of complex carbohydrates, lean protein, healthy fats and generous portions
-of fruits and vegetables which add all the essential vitamins, minerals and fibre to your diet.
+
+A diet rich in protein is essential for promoting muscle growth and repair while simultaneously burning 
+fat to ensure you stay in shape. This plan includes high protein meals for individuals who want to gain 
+weight or build muscle. If you are a fitness enthusiast who’s
+ looking for meals higher in calories and lean protein then we’ve got you covered.
 <br />
-<br />
-Disclaimer: This isn’t going to be any type of a crash diet which will 
-give you magical results; we’ll aim for 2-4kgs 
-per month and all your meals will be designed by our nutritionists
- who focus not only on seeing results but also on ensuring that there’s 
- no compromise on your mental and physical health.
+
 </p>
 <button>View Sample Menu</button>
        </div>
@@ -433,13 +429,8 @@ per month and all your meals will be designed by our nutritionists
 </div>
 </div>
 <div className="fourdiv">
-  <h6>Weight-loss Diaries</h6>
+  <h6>Muscle Diaries</h6>
 <AutoPlayMethods1></AutoPlayMethods1>
-</div>
-<div className="finder">
-<div className="fifthdiv">
-<img src={gito} alt="" />
-</div>
 </div>
 
 <div className="empspan">

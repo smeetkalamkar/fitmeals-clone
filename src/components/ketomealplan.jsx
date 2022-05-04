@@ -164,7 +164,7 @@ border-radius:100px;
 }
     
 `
-export const WeightLossMealPlan=()=>{
+export const KetoMealPlan=()=>{
   
     class AutoPlayMethods extends Component {
         constructor(props) {
@@ -277,24 +277,20 @@ export const WeightLossMealPlan=()=>{
         <img src="https://www.fitmeals.co.in/wp-content/uploads/2018/02/inner-page.jpg" alt="" />
         </div>
         <div>
-<h1 style={{color:"white"}}>Weight Loss Meal Plan</h1>
+<h1 style={{color:"white"}}>Keto Meal Plan</h1>
         </div>
     <div >
    <div>
 
        <div>
 <p>
-If your aim is to lose weight in a gradual, healthy manner then 
-this diet would meet your requirements. The meals are well balanced and 
-consist of complex carbohydrates, lean protein, healthy fats and generous portions
-of fruits and vegetables which add all the essential vitamins, minerals and fibre to your diet.
+
+The keto diet is all about eating meals that are high in fat, consist
+ moderate portions of protein and very low in carbs. The reduction of 
+ carbohydrates results in a metabolic process called
+ ketosis where your body fat is then used to generate energy in the body.
 <br />
-<br />
-Disclaimer: This isn’t going to be any type of a crash diet which will 
-give you magical results; we’ll aim for 2-4kgs 
-per month and all your meals will be designed by our nutritionists
- who focus not only on seeing results but also on ensuring that there’s 
- no compromise on your mental and physical health.
+
 </p>
 <button>View Sample Menu</button>
        </div>
@@ -433,13 +429,8 @@ per month and all your meals will be designed by our nutritionists
 </div>
 </div>
 <div className="fourdiv">
-  <h6>Weight-loss Diaries</h6>
+  <h6>Keto diaries</h6>
 <AutoPlayMethods1></AutoPlayMethods1>
-</div>
-<div className="finder">
-<div className="fifthdiv">
-<img src={gito} alt="" />
-</div>
 </div>
 
 <div className="empspan">
