@@ -1,5 +1,6 @@
+import "./seprateproduct.css"
 export const Navbar=()=>{
     return <nav className="naver">
-dddddd
+uuuu
     </nav>
 }
