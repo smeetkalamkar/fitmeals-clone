@@ -238,31 +238,31 @@ export const MaintenanceMealPlan=()=>{
             <div>
          
               <Slider  className="Slider1" ref={slider => (this.slider = slider)} {...settings}>
-                <div >
+              <div className="image-div" >
                   <img src="https://www.fitmeals.co.in/wp-content/uploads/2021/05/8B7C0945-E90C-46E1-9B35-B67136929EDE-2.jpg" alt="" />
                 </div>
-                <div>
+                <div className="image-div">
                   <img src="https://www.fitmeals.co.in/wp-content/uploads/2021/05/52383BDD-D644-454A-AC1D-50E2DF6B7AF6-2.jpg" alt="" />
                 </div>
-                <div>
+                <div className="image-div">
                  <img src="https://www.fitmeals.co.in/wp-content/uploads/2021/05/6350561F-C9DA-4249-820B-74B62FA3E6D7-2-744x1024.jpg" alt="" />
                 </div>
-                <div>
+                <div className="image-div">
                  <img src="https://www.fitmeals.co.in/wp-content/uploads/2021/05/F497D877-C665-4718-9D60-DC6884CF8F86-2.jpg" alt="" />
                 </div>
-                <div>
+                <div className="image-div">
                  <img src="https://www.fitmeals.co.in/wp-content/uploads/2021/05/994FBF1F-9040-4E78-9F53-FBB220B51F33-576x1024.jpg" alt="" />
                 </div>
-                <div>
+                <div className="image-div">
                  <img src="https://www.fitmeals.co.in/wp-content/uploads/2021/05/96C9BAE4-D634-416D-922A-C8E38B26FBD1-576x1024.jpg" alt="" />
                 </div>
-                <div>
+                <div className="image-div">
                  <img src="https://www.fitmeals.co.in/wp-content/uploads/2021/05/9E384942-13E2-49D5-95C3-19C8F4E351A5-576x1024.jpg" alt="" />
                 </div>
-                <div>
+                <div className="image-div">
                  <img src="https://www.fitmeals.co.in/wp-content/uploads/2021/05/6447D6C4-E45F-4108-B1FD-E4CFAE2886CA-576x1024.jpg" alt="" />
                 </div>
-                <div>
+                <div className="image-div">
                  <img src="https://www.fitmeals.co.in/wp-content/uploads/2021/05/E92321D7-99A8-4343-ABE9-595C732CD6E4-3.jpg" alt="" />
                 </div>
               </Slider>
