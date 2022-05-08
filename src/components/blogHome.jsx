@@ -18,7 +18,7 @@ const Home = () => {
               alt=""
             />
             <h6>Hafsaa</h6>
-            <span>Nutrition Blogger</span>
+            <span >Nutrition Blogger</span>
             <p>
               Passionate about anything related to health and fitness and loves
               to bust ridiculous diet myths using evidence based explanations.
