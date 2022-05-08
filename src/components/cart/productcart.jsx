@@ -7,10 +7,11 @@ import axios from "axios"
 export const ProductCart=()=>{
     const tokenkey=useSelector((store)=> store.token.token)
     const [cartdata,setcartdata]=useState([])
+    const id=tokenkey
     let sum=0;
     cartdata.forEach((e)=> sum+=e.price)
     useEffect(()=>{
-        axios.get(`https://secret-basin-20477.herokuapp.com/cart/${tokenkey}`)
+        axios.get(`https://secret-basin-20477.herokuapp.com/cart/${id}`)
         .then(function (response) {
          
           // handle success
