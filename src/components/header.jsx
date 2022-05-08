@@ -1,5 +1,5 @@
 import { FaSearch ,FaShoppingBag,TiLocation} from 'react-icons/fa';
-
+import axios from 'axios';
 import website_icon from "../assets/images/website-icon.png"
 import { IoLocationOutline,IoSearchOutline } from "react-icons/io5";
 import { addToken } from "../combineReducers/Logins/action";
@@ -11,7 +11,7 @@ import "./css/header.css"
 import Mealmodel from './model/mealmodel';
 import { Productsmodel } from './model/mealmodel';
 import { Aboutmodel } from './model/mealmodel';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import {Link} from "react-router-dom"
 import { useDispatch,useSelector } from "react-redux";
 import {useNavigate} from "react-router-dom"
@@ -28,10 +28,30 @@ function Header_fit_meals()
 
      const tokenkey=useSelector((store)=>
      store.token.token
- )      
+ )  
+ let id=tokenkey    
  console.log(tokenkey ,"6969") 
  const navigate=useNavigate(); 
 const dispatch=useDispatch()
+const [bag,setbag]=useState([]);
+
+useEffect(()=>{
+    axios.get(`https://secret-basin-20477.herokuapp.com/cart/${id}`)
+    .then(function (response) {
+     
+      // handle success
+      console.log(response.data);
+     
+      setbag(response.data)
+    })
+    .catch(function (error) {
+      // handle error
+      console.log(error);
+    })
+    .then(function () {
+      // always executed
+    })
+})
     return (
       <div id='fit_meals_total_header_part'>
     <div className=''>
@@ -55,7 +75,7 @@ const dispatch=useDispatch()
                         alert("Thanks !")
                         navigate("/")
                        }}>Log Out</button> } 
-                        <div><Link to="/cartpage"><FaShoppingBag/></Link> </div>
+                        <div className='cartcount' ><Link to="/cartpage"><FaShoppingBag/>{bag.length}</Link> </div>
                         <div className='seacrh_input_fitclone'>{search?<Searchinput/>:""}</div>
                          
                  </div>
