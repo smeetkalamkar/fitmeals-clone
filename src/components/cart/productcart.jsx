@@ -61,7 +61,7 @@ export const ProductCart=()=>{
        </div>
        
           <div className="thirddiv">
-           <div>
+              { tokenkey==null|| cartdata.length==0 ? <div  className="emtydiv">Empty cart</div> : <div>
                <div>
                    <div>Product</div>
                    <div>Price</div>
@@ -69,8 +69,9 @@ export const ProductCart=()=>{
                    <div>Subtotal</div>
                </div>
            
-             {
-             tokenkey==null|| cartdata.length==0 ? <div className="emtydiv">Empty cart</div> : cartdata.map((x)=>{
+             
+             {}
+              {cartdata.map((x)=>{
                   return  <div className="productsdiv">
            <div onClick={()=>{
                deleteProduct(x._id)
@@ -95,7 +96,7 @@ valueIncrease(e,x._id)
            </div>
                   </div>
               })   
-             }
+            }
            <div className="coupans">
                <input type="text" name="" id="" placeholder="Coupon code" />
                <button>Apply Coupon</button>
@@ -128,7 +129,8 @@ valueIncrease(e,x._id)
                    <button className="butonj">Proceed to checkout</button>
                </div>
            </div>
-           </div>
+           </div> }
+          
            
                   </div>
        
