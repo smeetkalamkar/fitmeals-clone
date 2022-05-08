@@ -11,6 +11,7 @@ export const ProductCart=()=>{
     let sum=0;
     cartdata.forEach((e)=> sum+=e.price)
     useEffect(()=>{
+        
         axios.get(`https://secret-basin-20477.herokuapp.com/cart/${id}`)
         .then(function (response) {
          
