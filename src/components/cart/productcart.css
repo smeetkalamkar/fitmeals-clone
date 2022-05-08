@@ -318,3 +318,11 @@ width: 20px;
 height: 25px;
 margin-left: 10px;
   }
+  .emtydiv{
+width: 100%;
+background-color: #fff !important;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 40PX;
+  }

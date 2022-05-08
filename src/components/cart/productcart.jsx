@@ -13,8 +13,8 @@ export const ProductCart=()=>{
        <div className="secdiv">
            <h1>Cart</h1>
        </div>
-       {
-           tokenkey==null||cartdata.length==0 ? <h1>Cart Is Empty</h1> :<div className="thirddiv">
+       
+          <div className="thirddiv">
            <div>
                <div>
                    <div>Product</div>
@@ -24,8 +24,8 @@ export const ProductCart=()=>{
                </div>
            
              {
-              cartdata.map((e)=>{
-                  return <div className="productsdiv">
+             tokenkey==null|| cartdata.length==0 ? <div className="emtydiv">Empty cart</div> : cartdata.map((e)=>{
+                  return  <div className="productsdiv">
            <div>x</div>
            <div><img src={e.image} alt="" /></div>
            <div>
@@ -55,7 +55,7 @@ export const ProductCart=()=>{
                <div>
                    <div>
                        <div>Subtotal</div>
-                       <div><p>₹{(1121212).toLocaleString()} </p></div>
+                       <div><p>₹{(sum).toLocaleString()} </p></div>
                    </div>
                    <div>
                        <div>Shipping</div>
@@ -81,7 +81,7 @@ export const ProductCart=()=>{
            </div>
            
                   </div>
-       }
+       
        
     </div>
 }

@@ -108,7 +108,36 @@ const [relateproduct,setRelateproduct]=useState([
 navigate("/loginpage")
                 }else{
                     alert("Product Added to cart")
-                    navigate("/cartpage")   
+                    axios.post('https://secret-basin-20477.herokuapp.com/cart', {
+                        image:data.image ,
+                        title:data.title,
+                        price:data.price ,
+                        description:data.description ,
+                        about_product:data.subcategories,
+                        quantity:data.quantity ,
+                        categories:data.categories ,
+                        subcategories:data.subcategories ,
+                        userid:id,
+                        nop:procounter
+                      })
+                      .then(function (response) {
+                        console.log(response.data);
+                        if(response.data=="Check username or password"){
+                alert("Check username or password")
+                return
+                        }else if(response.data.message=="user already exist"){
+                            alert("user already exist")
+                            return
+                        }else{
+                            dispatch(addToken(response.data))
+                            alert("Loin Sucessful")
+                            navigate(-1);
+                            
+                        }
+                      })
+                      .catch(function (error) {
+                        console.log(error);
+                      });
                 }
             }} className="addtocartbutt">Add to cart</button ></div>
              <p>Categories:{data.categories}, Products</p>    
