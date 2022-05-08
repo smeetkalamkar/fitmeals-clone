@@ -12,7 +12,10 @@ export const ProductCart=()=>{
     let sum=0;
     cartdata.forEach((e)=> sum+=e.price)
     useEffect(()=>{
-        
+        getData()
+    },[])
+    const getData=()=>{
+ 
         axios.get(`https://secret-basin-20477.herokuapp.com/cart/${id}`)
         .then(function (response) {
          
@@ -28,17 +31,23 @@ export const ProductCart=()=>{
         .then(function () {
           // always executed
         })
-    },[])
+    }
     const valueIncrease=(e,x)=>{
 
-        axios.patch(`https://secret-basin-20477.herokuapp.com/cart/${x}`, {
-            
-            params: {
-                nop: e.target.value
-              }
-          })
+        axios.patch(`https://secret-basin-20477.herokuapp.com/cart/${e.target.value}/${x}`)
           .then(function (response) {
             console.log(response.data);
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
+    }
+    const deleteProduct=(g)=>{
+
+        axios.delete(`https://secret-basin-20477.herokuapp.com/cart/${g}`)
+          .then(function (response) {
+            console.log(response.data);
+            getData();
           })
           .catch(function (error) {
             console.log(error);
@@ -62,7 +71,9 @@ export const ProductCart=()=>{
              {
              tokenkey==null|| cartdata.length==0 ? <div className="emtydiv">Empty cart</div> : cartdata.map((x)=>{
                   return  <div className="productsdiv">
-           <div>x</div>
+           <div onClick={()=>{
+               deleteProduct(x._id)
+           }}>x</div>
            <div><img src={x.image} alt="" /></div>
            <div>
            
@@ -72,7 +83,7 @@ export const ProductCart=()=>{
            </div>
            <div>₹{x.price.toFixed(2)}</div>
            <div>
-               <input min={0} onChange={(e)=>{
+               <input min={1} onChange={(e)=>{
 valueIncrease(e,x._id)
                }} defaultValue={x.nop} className="increaseProduct" type="number" name="" id="" />
            </div>

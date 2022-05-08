@@ -95,7 +95,8 @@ const [relateproduct,setRelateproduct]=useState([
              
              <p>Quantity</p>
              <div className="radio_check"> <input type="radio" defaultChecked="ture"/>  {data.quantity} gm</div>
-             <div className="maya"><input  onChange={(e)=>{
+             <div className="maya"><input min={1} onChange={(e)=>{
+                
                  setProcounter(e.target.value)
              }} type="number" defaultValue={1} className="increaseProduct" /><button  onClick={()=>{
                  console.log(tokenkey)
