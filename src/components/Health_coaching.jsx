@@ -2,7 +2,7 @@ import { React } from "react";
 
 import Appslider from "./Appslider";
 import BottomSlider from "./Bottomapp";
-
+import image1s from "./appStore_det.JPG"
 
 
 export const Health_coaching = ()=>{
@@ -221,7 +221,7 @@ export const Health_coaching = ()=>{
                 </div>
             </div>
             <div className="hC_gplayDet">
-                <img src={`${process.env.PUBLIC_URL}/appStore_det.jpg`} alt="GPlay_det" width="85%"/>
+                <img src={image1s} alt="GPlay_det" width="85%"/>
             </div>
             <div className="footer_fitmeals">
                 {/* Add Footer here */}
