@@ -2,7 +2,7 @@ import { React } from "react";
 
 import Appslider from "./Appslider";
 import BottomSlider from "./Bottomapp";
-import image1s from "./appStore_det.JPG"
+
 
 
 export const Health_coaching = ()=>{
@@ -69,13 +69,13 @@ export const Health_coaching = ()=>{
                         </div>
                         <div className="contactTxt">
                             <div className="icon_imgC">
-                                <img src={`${process.env.PUBLIC_URL}/icon_time.jpg`} alt="cont01" width="50px"/>
+                                <img src={`${process.env.PUBLIC_URL}/icon_time.JPG`} alt="cont01" width="50px"/>
                             </div>
                             <div className="icon_txtC">
                                 <h3>Every day from 12:00 PM to 10:00 PM</h3>
                             </div>
                             <div className="icon_imgC">
-                                <img src={`${process.env.PUBLIC_URL}/icon_contact.jpg`} alt="cont02" width="50px"/>
+                                <img src={`${process.env.PUBLIC_URL}/icon_contact.JPG`} alt="cont02" width="50px"/>
                             </div>
                             <div className="icon_txtC">
                                 <h3>+91 9100347489</h3>
@@ -134,7 +134,7 @@ export const Health_coaching = ()=>{
             </div>
             <div className="hC_works">
                 <div className="waveWork">
-                    <img src={`${process.env.PUBLIC_URL}/wave.jpg`} alt="bg000" width="100%"/>
+                    <img src={`${process.env.PUBLIC_URL}/wave.JPG`} alt="bg000" width="100%"/>
                 </div>
                 <div className="dw_workIcon">
                     <br />
@@ -221,7 +221,7 @@ export const Health_coaching = ()=>{
                 </div>
             </div>
             <div className="hC_gplayDet">
-                <img src={image1s} alt="GPlay_det" width="85%"/>
+                <img src={`${process.env.PUBLIC_URL}/appStore_det.JPG`} alt="GPlay_det" width="85%"/>
             </div>
             <div className="footer_fitmeals">
                 {/* Add Footer here */}
