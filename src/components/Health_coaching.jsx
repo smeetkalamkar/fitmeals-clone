@@ -134,7 +134,7 @@ export const Health_coaching = ()=>{
             </div>
             <div className="hC_works">
                 <div className="waveWork">
-                    <img src={process.env.PUBLIC_URL +"wave.jpg"} alt="bg000" width="100%"/>
+                    <img src={process.env.PUBLIC_URL +"/wave.jpg"} alt="bg000" width="100%"/>
                 </div>
                 <div className="dw_workIcon">
                     <br />
