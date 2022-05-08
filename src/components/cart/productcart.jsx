@@ -1,13 +1,31 @@
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import "./productcart.css"
 import tractor from "../mealplans/pictures/tractor.jpg"
 import {useSelector} from "react-redux"
+import axios from "axios"
 export const ProductCart=()=>{
     const tokenkey=useSelector((store)=> store.token.token)
     const [cartdata,setcartdata]=useState([])
     let sum=0;
     cartdata.forEach((e)=> sum+=e.price)
+    useEffect(()=>{
+        axios.get(`https://secret-basin-20477.herokuapp.com/cart/${tokenkey}`)
+        .then(function (response) {
+         
+          // handle success
+          console.log(response.data);
+          
+          setcartdata(response.data)
+        })
+        .catch(function (error) {
+          // handle error
+          console.log(error);
+        })
+        .then(function () {
+          // always executed
+        })
+    },[])
     return <div className="maindiv">
        <div className="firstdiv"></div>
        <div className="secdiv">

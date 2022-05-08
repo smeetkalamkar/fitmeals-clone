@@ -4,26 +4,20 @@ import { useNavigate } from "react-router-dom";
 import { useParams,Link } from "react-router-dom";
 import axios from "axios"
 import { useDispatch,useSelector } from "react-redux";
+import { addToken } from "../../combineReducers/Logins/action";
 import styled from "styled-components"
 const MainImage=styled.div`
     background-image: ${(props) => `url(${props.maindata})`};
     
 `
 export const SeprateProduct=()=>{
+const dispatch=useDispatch();
 
     const tokenkey=useSelector((store)=>
     store.token.token
 )
 const navigate=useNavigate();
-    const [data,setData]=useState({
-        "title":"Arrabiata Sauce",
-    "image":"https://www.fitmeals.co.in/wp-content/uploads/2021/06/arrabbiata-sauce-680x900-1.jpg",
-    "price":220,
-    "description":"Fitmeals Arrabbiata sauce is a delicious blend of spicy chillies, tomatoes and authentic Italian ingredients.",
-    "quantity":500,
-    "categories":["Low Calorie Sauces","Products"] ,
-    "subcategories":"Low Calorie Sauces"
-    })
+    const [data,setData]=useState({})
     let {id} = useParams();
     console.log(id)
     id = id.split(":")[1];
@@ -36,11 +30,12 @@ const navigate=useNavigate();
 
     useEffect(()=>{
             
-        axios.get(`http://localhost:9083/singleprdt/${id}`)
+        axios.get(`https://secret-basin-20477.herokuapp.com/singleprdt/${id}`)
   .then(function (response) {
     setData(response.data)
     // handle success
     console.log(response.data);
+    setData(response.data)
   })
   .catch(function (error) {
     // handle error
@@ -122,18 +117,6 @@ navigate("/loginpage")
                       })
                       .then(function (response) {
                         console.log(response.data);
-                        if(response.data=="Check username or password"){
-                alert("Check username or password")
-                return
-                        }else if(response.data.message=="user already exist"){
-                            alert("user already exist")
-                            return
-                        }else{
-                            dispatch(addToken(response.data))
-                            alert("Loin Sucessful")
-                            navigate(-1);
-                            
-                        }
                       })
                       .catch(function (error) {
                         console.log(error);
