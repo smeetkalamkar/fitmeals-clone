@@ -49,6 +49,9 @@ const passCred=(e)=>{
     if(cred.passcode.length==0||cred.passcode.length==0){
         return alert("Fields are empty")
     }
+    if(cred.passcode.length==0||cred.passcode.length==0){
+        return alert("Fields are empty")
+    }
     axios.post('https://secret-basin-20477.herokuapp.com/login', {
         email: cred.email,
         password: cred.passcode
@@ -58,11 +61,9 @@ const passCred=(e)=>{
         if(response.data=="Check username or password"){
 alert("Check username or password")
 return
-        }else if(response.data.message=="user already exist"){
-            alert("user already exist")
-            return
         }else{
             dispatch(addToken(response.data))
+            console.log(response.data)
             alert("Loin Sucessful")
             navigate(-1);
             

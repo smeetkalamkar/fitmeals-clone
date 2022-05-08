@@ -6,6 +6,7 @@ import {useSelector} from "react-redux"
 import axios from "axios"
 export const ProductCart=()=>{
     const tokenkey=useSelector((store)=> store.token.token)
+    console.log(tokenkey)
     const [cartdata,setcartdata]=useState([])
     const id=tokenkey
     let sum=0;
@@ -17,7 +18,7 @@ export const ProductCart=()=>{
          
           // handle success
           console.log(response.data);
-          
+         
           setcartdata(response.data)
         })
         .catch(function (error) {
@@ -28,6 +29,21 @@ export const ProductCart=()=>{
           // always executed
         })
     },[])
+    const valueIncrease=(e,x)=>{
+
+        axios.patch(`https://secret-basin-20477.herokuapp.com/cart/${x}`, {
+            
+            params: {
+                nop: e.target.value
+              }
+          })
+          .then(function (response) {
+            console.log(response.data);
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
+    }
     return <div className="maindiv">
        <div className="firstdiv"></div>
        <div className="secdiv">
@@ -44,23 +60,25 @@ export const ProductCart=()=>{
                </div>
            
              {
-             tokenkey==null|| cartdata.length==0 ? <div className="emtydiv">Empty cart</div> : cartdata.map((e)=>{
+             tokenkey==null|| cartdata.length==0 ? <div className="emtydiv">Empty cart</div> : cartdata.map((x)=>{
                   return  <div className="productsdiv">
            <div>x</div>
-           <div><img src={e.image} alt="" /></div>
+           <div><img src={x.image} alt="" /></div>
            <div>
            
-               <h4 className="hoir">{e.title}</h4>
-            <h4 className="hoir" style={{color:"black"}}>Quatity: <span style={{color:"black"}} className="smaltext">{e.quantity} g</span></h4>
+               <h4 className="hoir">{x.title}</h4>
+            <h4 className="hoir" style={{color:"black"}}>Quatity: <span style={{color:"black"}} className="smaltext">{x.quantity} g</span></h4>
              
            </div>
-           <div>₹{e.price.toFixed(2)}</div>
+           <div>₹{x.price.toFixed(2)}</div>
            <div>
-               <input defaultValue={e.NOS} className="increaseProduct" type="number" name="" id="" />
+               <input min={0} onChange={(e)=>{
+valueIncrease(e,x._id)
+               }} defaultValue={x.nop} className="increaseProduct" type="number" name="" id="" />
            </div>
            <div>
                <h4>
-                   ₹{((e.NOS*e.price).toFixed(2)).toLocaleString()}
+                   ₹{((x.nop*x.price).toFixed(2)).toLocaleString()}
                </h4>
            </div>
                   </div>
