@@ -12,12 +12,23 @@
     width:330px;
     height:auto;
     background-color: green;
-    margin-top: -60px;
+    margin-top: 0px;
+ 
+
 }
 
 .fj{
-   margin-top: -70px; 
+   margin-top: 100px; 
+  
+   
 }
+
+.fj h6{
+     margin-top: 40px;
+     
+     margin-left:-120px ;
+     
+ }
 /* &>div:nth-child(1){
     width:60%;
     height:90px;
@@ -37,12 +48,14 @@
     background-color: #8ec138;
     display: flex;
     justify-content: space-around;
+   
     
     
 }
 .third>div:nth-child(1){
     width:25%;
     height:100%;
+   
     
 }
 .third>div:nth-child(1)>h2{
@@ -59,6 +72,7 @@
     display:grid;
     grid-template-columns: repeat(3,1fr);
     grid-gap: 10px;
+   
   
 }
 .third>div:nth-child(2)>div{
@@ -68,6 +82,12 @@
     margin-top: 110px;
     border-radius: 25px;
     text-align: center;
+  
+}
+.third>div:nth-child(2)>div p{
+   
+    text-align: center;
+   
 }
 .third>div:nth-child(2)>div:hover{
    
@@ -81,9 +101,11 @@
     font-size: 16px;
     padding-top: 10px;
     margin-top: -20px;
+    
 }
 .third>div:nth-child(2)>div>div>p{
     margin-left: 20px;
+    
  }
  .third>div:nth-child(2)>div>div>img{
    height: 35px;
@@ -120,6 +142,8 @@
    background-color: white;
     padding-top: 80px;
     padding-bottom: 270px;
+   
+   
     
 }
 .fourdiv>h6{
@@ -127,7 +151,7 @@
     font-weight: 400;
     font-size: 40px;
     text-align:center;
-    margin-top:60px;
+     margin-bottom: 20px;
     font-style:italic;
     color:#97c548;
 }
@@ -145,18 +169,19 @@
 }
 
 .Slider1{
-    width:80%;
-    height:380px;
+    width:60%;
+    height:350px;
     background-color: green;
-   margin-left: 10%;
-   margin-top: -20px;
+   margin: auto;
 }
 .fifthdiv{
-    width: 97%;
+    width: 60%;
+    margin: auto;
     height: 300px;
    border: #8ec138 solid 3px;
    border-radius: 20px;
-   margin-left: 1.4%;
+  
+ 
    background-color: white;
 }
 .fifthdiv>img{
@@ -165,9 +190,10 @@
 }
 
 .empspan{
-    width: 100%;
-    height: 100px;
-    color: white;
+   
+   width: 100%;
+   height: 100px;
+   background-color: white;
 }
 .finder{
     background-color: white;
@@ -197,4 +223,10 @@ grid-gap: 5px;
             padding-top: 50px;
             display: flex;
             justify-content: center;
+        }
+        
+
+        .Slider1>div>div>div>div{
+            
+            
         }

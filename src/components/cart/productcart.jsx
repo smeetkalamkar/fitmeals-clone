@@ -1,7 +1,7 @@
 
 import { useState } from "react"
 import "./productcart.css"
-
+import tractor from "../mealplans/pictures/tractor.jpg"
 export const ProductCart=()=>{
     const [cartdata,setcartdata]=useState([
         {
@@ -68,8 +68,8 @@ export const ProductCart=()=>{
 <div><img src={e.image} alt="" /></div>
 <div>
 
-    <h4>{e.title}</h4>
- <h4>Quatity: <span className="smaltext">{e.quantity} g</span></h4>
+    <h4 className="hoir">{e.title}</h4>
+ <h4 className="hoir" style={{color:"black"}}>Quatity: <span style={{color:"black"}} className="smaltext">{e.quantity} g</span></h4>
   
 </div>
 <div>₹{e.price.toFixed(2)}</div>
@@ -87,7 +87,7 @@ export const ProductCart=()=>{
 <div className="coupans">
     <input type="text" name="" id="" placeholder="Coupon code" />
     <button>Apply Coupon</button>
-    <h4>UPDATE CART</h4>
+    <h4 className="ghut">UPDATE CART</h4>
 </div>
 <div className="finaldiv">
     <div>
@@ -99,11 +99,14 @@ export const ProductCart=()=>{
             <div>Shipping</div>
             <div className="texteditor">
                  <p>Flat rate: ₹50.00</p>
-            <span>
-            <p>Shipping to </p>
-            <p>Telangana.</p>
-            </span>
-      <p>CHANGE ADDRESS</p>
+          
+          <p>  <span>Shipping to</span> Telangana.</p>
+          
+          <div className="tractor">
+          <p className="opk"> CHANGE ADDRESS</p>
+          <img  src={tractor} alt="" />
+          </div>
+          
 </div>
         </div>
         <div>

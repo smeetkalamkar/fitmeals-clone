@@ -1,8 +1,8 @@
 .maindiv{
     width: 100%;
     height:auto;
-    position: absolute;
-    margin-top: 100px !important;
+    
+   
 }
 .firstdiv{
     width:100%;
@@ -118,10 +118,10 @@ background-color: darkslategray;
 }  
 
 .productsdiv>div:nth-child(3){
-    text-align: left;
+    text-align: left !important;
     line-height: 0px !important;
-    display: block;
-    width: auto;
+    display: block !important;
+    width: auto !important;
     width: 300px !important;
 }  
 
@@ -232,21 +232,37 @@ height: 100% !important;
    
    .texteditor>p:nth-child(1){
 font-size: 13px;
+text-align: right !important;
+margin-right: 10px !important;
    }
-   .texteditor>span:nth-child(2){
-    display: flex;
+   .texteditor>:nth-child(2){
+    text-align: right !important;
+    margin-right: 10px !important;
+    
+       }
+       .texteditor>:nth-child(2)>span{
+        color: 
+        #61727f !important;
+        font-weight: 100;
+        
+           }
+       .opk{
+        text-align: right !important; 
+        margin-bottom: 9px !important;
        }
        .texteditor{
-           line-height: 0.0px !important;
-       }
-
+        line-height: 0.1px !important;
+        
+    }
        .finaldiv>div>div:nth-child(1)>:nth-child(2)>p{
 margin-top: 40px;
-
+text-align: right !important;
+           margin-right: 10px !important;
            }
            .finaldiv>div>div:nth-child(3)>:nth-child(2)>p{
             margin-top: 40px !important;
-            
+           text-align: right !important;
+           margin-right: 10px !important;
                        }
                        .butonj{
                         background-color: crimson !important;
@@ -269,5 +285,36 @@ margin-top: 40px;
                                             }
                                             .finaldiv>div>div:nth-child(1)>:nth-child(1){
                                               text-align: center !important;
-                                             
+                                            
                                                         }
+.prioty{
+color: black !important;
+}                                                        
+.hoir{
+  margin-top: 20px;
+  line-break: auto;
+}
+.ghut{
+  width: 150px !important;
+  padding: 0px !important;
+  height: 30px !important;
+}
+.ghut:hover{
+ cursor: pointer;
+}
+.tractor{
+display: flex;
+justify-content: center;
+align-items:flex-end;
+width: auto;
+border-bottom: greenyellow dotted 4px;
+width: 80%;
+margin-top: -10px;
+margin-left: 20px;
+
+}
+.tractor img{
+width: 20px;
+height: 25px;
+margin-left: 10px;
+  }

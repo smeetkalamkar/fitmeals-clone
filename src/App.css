@@ -36,10 +36,3 @@
     transform: rotate(360deg);
   }
 }
-.naver{
-  height: 100px;
-  width: 100%;
-  background-color: yellow;
-  position: fixed;
-  z-index: 10;
-}

@@ -13,10 +13,13 @@ import tick from "./pictures/tick.jpg"
 import "./autoplay.css"
 import gito from "./pictures/getintouch.jpg"
 const MainDiv=styled.div`
+
     width:100%;
     height:auto;
-   padding-top:100px;
+    
+   
     &>div:nth-child(1){
+
         width:100%;
         height:380px;
          position:fixed;
@@ -34,8 +37,7 @@ const MainDiv=styled.div`
         justify-content:center;
         align-items:center;
         font-size:26px;
-       
-        
+          
     }
     &>div:nth-child(3){
         width:100%;
@@ -81,7 +83,7 @@ height:100%;
   font-family: 'Sacramento', cursive;
     font-weight: 400;
     font-size: 40px;
-    margin-left:-170px;
+   
 }
 }
 
@@ -107,27 +109,36 @@ border:solid 0px white;
     color:#97c548;
     }
    &>div{
-    margin-top:-60px;
+    
        width:100%;
        height:80%;
+     
+       margin-top: 30px;
+
       
        background-color:white;
        display:flex;
        justify-content:space-around;
        &>div{
+       
        width:70%;
        height:80%;
        display:flex;
        justify-content:space-around;
        &>div{
 margin-top:20px;
+
+text-align: center;
+
 height:300px;
 width:200px;
-    text-align:center;
+    
     text-overflow: ellipsis;
     max-width: 70vw;
   margin: 1em auto;
     &>p:nth-child(3){
+      text-align:center;
+      
         line-height: 1.8em;
         font-size: 14px;
         line-height: 2em;
@@ -136,6 +147,8 @@ width:200px;
         font-weight: 400;
     }
     &>p:nth-child(2){
+      text-align:center;
+      
     font-family: 'Fira Sans', serif;
     font-family: var(--font-headers), serif;
     font-weight: 700;
@@ -143,6 +156,7 @@ width:200px;
     word-wrap: break-word;
     }
 &>div{
+  
 width:100px;
 height:100px;
 border-radius:100%;

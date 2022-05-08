@@ -1,16 +1,20 @@
 import { useEffect, useState } from "react"
 import "./seprateproduct.css"
+import { useNavigate } from "react-router-dom";
+import { useParams,Link } from "react-router-dom";
+import axios from "axios"
+import { useDispatch,useSelector } from "react-redux";
 import styled from "styled-components"
 const MainImage=styled.div`
     background-image: ${(props) => `url(${props.maindata})`};
     
 `
 export const SeprateProduct=()=>{
-    const [procounter,setProcounter]=useState(1)
-    useEffect(()=>{
-        console.log(procounter)
-    },[procounter])
-    
+
+    const tokenkey=useSelector((store)=>
+    store.token.token
+)
+const navigate=useNavigate();
     const [data,setData]=useState({
         "title":"Arrabiata Sauce",
     "image":"https://www.fitmeals.co.in/wp-content/uploads/2021/06/arrabbiata-sauce-680x900-1.jpg",
@@ -20,6 +24,36 @@ export const SeprateProduct=()=>{
     "categories":["Low Calorie Sauces","Products"] ,
     "subcategories":"Low Calorie Sauces"
     })
+    let {id} = useParams();
+    console.log(id)
+    id = id.split(":")[1];
+    console.log(id)
+    const [procounter,setProcounter]=useState(1)
+    useEffect(()=>{
+        console.log(procounter)
+    },[procounter])
+
+
+    useEffect(()=>{
+            
+        axios.get(`http://localhost:9083/singleprdt/${id}`)
+  .then(function (response) {
+    setData(response.data)
+    // handle success
+    console.log(response.data);
+  })
+  .catch(function (error) {
+    // handle error
+    console.log(error);
+  })
+  .then(function () {
+    // always executed
+  })
+
+    },[])
+    
+    
+    
 
 const [relateproduct,setRelateproduct]=useState([
     {
@@ -63,25 +97,26 @@ const [relateproduct,setRelateproduct]=useState([
         <p>₹{data.price}</p>
         <p>{data.description}</p>
              <h2>About This Product</h2> 
-             <ul>
-                 
-             {
-                 data.categories.map((e)=>{
-                     return <li>{e}</li>
-                 })
-             }  
-             </ul>
+             
              <p>Quantity</p>
-             <div> <span><input type="radio" defaultChecked="ture"/> </span> <span> {data.quantity} g</span></div>
-             <div><span><input onChange={(e)=>{
+             <div className="radio_check"> <input type="radio" defaultChecked="ture"/>  {data.quantity} gm</div>
+             <div className="maya"><input  onChange={(e)=>{
                  setProcounter(e.target.value)
-             }} type="number" defaultValue={1} className="increaseProduct" /></span><span><button  className="addtocartbutt">Add to cart</button></span></div>
-             <p><span>Categories:</span><span>{data.subcategories}, Products</span></p>    
+             }} type="number" defaultValue={1} className="increaseProduct" /><button  onClick={()=>{
+                 console.log(tokenkey)
+                if(tokenkey==null){
+navigate("/loginpage")
+                }else{
+                    alert("Product Added to cart")
+                    navigate("/cartpage")   
+                }
+            }} className="addtocartbutt">Add to cart</button ></div>
+             <p>Categories:{data.categories}, Products</p>    
     </div>
 
 </div>
 <div className="thirddiv">
-    <div><h2><span>Description</span><span>Reviews (0)</span></h2></div>
+    <div><h2 ><span style={{color:"#515151"}}>Description</span><span style={{color:"#515151"}}>Reviews (0)</span></h2></div>
 </div>
 <div className="mainmedea">
 <div className="fourthdiv">
@@ -90,8 +125,8 @@ const [relateproduct,setRelateproduct]=useState([
     </p>
     <p>About This Product</p>
     <span>
-    <p>Gluten Free</p>
-    <p>Soy Free</p>
+    <p style={{color:"#515151"}}>Gluten Free</p>
+    <p style={{color:"#515151"}}>Soy Free</p>
     </span>
 </div>
 </div>
@@ -101,13 +136,13 @@ const [relateproduct,setRelateproduct]=useState([
 <div>
    {
      relateproduct.map((e)=>{
-         return <div>
+         return <div className="fifthdiver_static">
              <div>
                  <img src={e.image} alt="" />
              </div>
              <h2>{e.title}</h2>
              <h2>₹{e.price.toFixed(2)}</h2>
-             <button>Select options</button>
+             <button >Select options</button>
              <p>Read more</p>
          </div>
      })  
