@@ -10,7 +10,7 @@ export const ProductCart=()=>{
     const [cartdata,setcartdata]=useState([])
     const id=tokenkey
     let sum=0;
-    cartdata.forEach((e)=> sum+=e.price)
+    cartdata.forEach((e)=> sum+=(e.price*e.nop))
     useEffect(()=>{
         getData()
     },[])
