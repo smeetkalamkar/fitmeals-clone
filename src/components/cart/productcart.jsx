@@ -37,6 +37,7 @@ export const ProductCart=()=>{
         axios.patch(`https://secret-basin-20477.herokuapp.com/cart/${e.target.value}/${x}`)
           .then(function (response) {
             console.log(response.data);
+            getData()
           })
           .catch(function (error) {
             console.log(error);
