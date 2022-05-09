@@ -229,5 +229,5 @@ export const Health_coaching = ()=>{
         </div>
         
     )
-}()
+}
 
