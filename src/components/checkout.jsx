@@ -4,7 +4,6 @@ import "./checkout.css"
 import {useSelector} from "react-redux"
 import {useNavigate} from "react-router-dom"
 import axios from "axios"
-import { useNavigate } from "react-router-dom"
 export const CheckOut=()=>{
     const navigate=useNavigate()
     const tokenkey=useSelector((store)=> store.token.token)
