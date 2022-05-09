@@ -4,7 +4,9 @@ import "./productcart.css"
 import tractor from "../mealplans/pictures/tractor.jpg"
 import {useSelector} from "react-redux"
 import axios from "axios"
+import { useNavigate } from "react-router-dom"
 export const ProductCart=()=>{
+  const navigate=useNavigate()
     const tokenkey=useSelector((store)=> store.token.token)
     console.log(tokenkey)
     const [cartdata,setcartdata]=useState([])
@@ -126,7 +128,9 @@ valueIncrease(e,x._id)
                        <div>Total</div>
                        <div><p>₹{(sum+50).toLocaleString()}</p></div>
                    </div>
-                   <button className="butonj">Proceed to checkout</button>
+                   <button onClick={()=>{
+navigate("/checkout")
+                   }} className="butonj">Proceed to checkout</button>
                </div>
            </div>
            </div> }

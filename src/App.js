@@ -21,6 +21,7 @@ import { LostPassword } from './components/lost-password';
 import {AboutUs} from "./components/AboutUs"
 import { SeprateProduct } from './components/singleproductpage/seprateproduct';
 import { Second } from './components/second';
+import { CheckOut } from './components/checkout';
 import  Test  from './components/Test';
 import  Home  from './components/blogHome';
 function App() {
@@ -46,6 +47,7 @@ function App() {
         <Route path='/faq' element={< Second />} />
         <Route path='/test' element={< Test />} />
         <Route path='/bloghome' element={< Home />} />
+        <Route path='/checkout' element={< CheckOut />} />
       </Routes>
 
       <Footer_part />
