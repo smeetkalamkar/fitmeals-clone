@@ -2,8 +2,11 @@
 import { useEffect, useState } from "react"
 import "./checkout.css"
 import {useSelector} from "react-redux"
+import {useNavigate} from "react-router-dom"
 import axios from "axios"
+import { useNavigate } from "react-router-dom"
 export const CheckOut=()=>{
+    const navigate=useNavigate()
     const tokenkey=useSelector((store)=> store.token.token)
     console.log(tokenkey)
     const [cartdata,setcartdata]=useState([])
@@ -124,7 +127,10 @@ export const CheckOut=()=>{
     <div> <input defaultChecked={true} type="radio" /> <p>Cash on Delivery: Pay on the first day of your meals.</p> </div>
     <div><input defaultChecked={false} type="radio" /> <p>PayUmoney .</p> </div>
     <div><input type="checkbox" /><p>I have read and agree to the website terms and conditions *.</p> </div>
-    <button className="tygdfy">Place order</button>
+    <button onClick={()=>{
+        alert("Order sucessfully placed")
+navigate("/")
+    }} className="tygdfy">Place order</button>
 </div>
 </div>
                   </div>
