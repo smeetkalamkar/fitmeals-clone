@@ -190,20 +190,4 @@ function Productpage()
  }
 
 export default Productpage
-function Eachproduct({data})
- {
-     return (<div className="display_product_categories_right_each">
-     <div> <img src={data.image} alt="" /></div>
-     <div><h2>{data.title}</h2></div>
-     <div><p className="description_prdt">{data.description}</p></div>
-     
-     <div><p>₹{data.price}</p></div>
-     <div>
-         <Link className="select_option_prdt-btn" to={`/SeprateProduct/:${data._id}`}  >select option</Link>
-     </div>
-     <div className="read_more">Read more</div>
- </div>
- )
- }
 
-export default Productpage
