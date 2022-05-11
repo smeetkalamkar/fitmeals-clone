@@ -53,7 +53,7 @@ A team project to clone Fitmeals website which is a healthy ,tasty and convenien
 - [@V A Magendran](https://github.com/Magendran001)
 - [@Tanvi Samant](https://github.com/tanviSAM)
 - [@Smeet Kalamkar](https://github.com/smeetkalamkar)
-- [@Anjali Priya](https://github.com/renurisha)
+- [@Anjali Priya]
 - [@Md Sharique Anwer](https://github.com/shariqAnwer)
 
   
